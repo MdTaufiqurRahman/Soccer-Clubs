@@ -1,0 +1,5 @@
+@media all and (max-width: 500px) {
+    div.row{
+        margin-left: 25px;
+    }
+}

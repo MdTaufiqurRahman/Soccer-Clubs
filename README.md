@@ -5,12 +5,10 @@ A platform where you can find information about your favourite team.
 This project is deployed at : https://soccer-clubs.netlify.app/
 
 Guide for local deployment -
-
-1. Clone the repository
-
-2. Install dependencies
+1. Clone the repository : https://github.com/MdTaufiqurRahman/Soccer-Clubs.git
+2. Install dependencies :
 npm install
-3. Run app
+3. Run app : 
 npm start
 
 ## 🧐 Feature list

@@ -1,8 +1,17 @@
-# Soccer Frenzy - explore your favourite team
+# Soccer Clubs - explore your favourite team
 A platform where you can find information about your favourite team.
 
 ## 🚀 Getting started
 This project is deployed at : https://soccer-clubs.netlify.app/
+
+Guide for local deployment -
+
+1. Clone the repository
+
+2. Install dependencies
+npm install
+3. Run app
+npm start
 
 ## 🧐 Feature list
  explore favourite soccer clubs

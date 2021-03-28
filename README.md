@@ -1,4 +1,7 @@
-Programming is my passion. I love to work with web technologies. My goal is to be an expert software engineer and develop efficient software systems.
+Programming is my passion. I love to work with 
+web technologies. My goal is to be an expert 
+software engineer and develop efficient software systems.
+
 # Soccer Clubs - explore your favourite team
 A platform where you can find information about your favourite team.
 

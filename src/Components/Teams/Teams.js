@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import SingleTeam from '../SingleTeam/SingleTeam';
 import {Container} from 'react-bootstrap';
 import './Teams.css';
+import loading from '../../loading';
 
 const Teams = () => {
     const [teams, setTeams] = useState([]);
@@ -21,7 +22,15 @@ const Teams = () => {
                  rowGap:'40px',
                  columnGap:'82px',
             }} >
-        
+                {
+                    teams.length === 0 && <img className="center" style={{
+                        display: 'block',
+                        marginLeft: 'auto',
+                        marginRight: 'auto',
+                        width:'30%',
+                        
+                    }} src={loading} alt=""/>
+                }
             {
                 teams.map(team => <SingleTeam team={team} ></SingleTeam>)
             }

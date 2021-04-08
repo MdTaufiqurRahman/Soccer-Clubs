@@ -2,6 +2,7 @@ import React from 'react';
 import banner from '../../banner.jpg';
 import Teams from '../Teams/Teams';
 import { Card} from 'react-bootstrap';
+import './Header.css';
 
 const Header = () => {
     return (

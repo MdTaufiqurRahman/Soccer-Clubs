@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
 import { Card, Container} from 'react-bootstrap';
+import loadings from '../../loading';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faFileSignature,
      faFlag, 
@@ -13,22 +14,33 @@ import Twitter from '../../Twitter.png';
 import YouTube from '../../YouTube.png';
 
 const TeamDetails = () => {
-    const {id} = useParams()
-    const [team, setTeam] = useState([]);
+    const {id} = useParams();
 
+    const [team, setTeam] = useState([]);
+    const [loading, setLoading] = useState(true);
     useEffect(() => {
         const url = `https://www.thesportsdb.com/api/v1/json/1/lookupteam.php?id=${id}`;
         fetch(url)
         .then(res => res.json())
-        .then(data => setTeam(data.teams[0]))
+        .then(data => {
+            setTeam(data.teams[0])
+            setLoading(false);
+        })
     },[id])
 
     return (
 
      <div style={{backgroundColor:'#001a33'}}>
-            <Card className="bg-dark text-white">
-            <Card.Img src={team.strTeamBanner} alt="Card image" />
-        </Card>
+            {  loading ? <img className="center" style={{
+                        display: 'block',
+                        marginLeft: 'auto',
+                        marginRight: 'auto',
+                        width:'30%',
+                    }} src={loadings} alt=""/> :
+                <Card className="bg-dark text-white">
+                <Card.Img src={team.strTeamBanner} alt="Card image" />
+            </Card>
+            }
 
         <Container>
         <div>
